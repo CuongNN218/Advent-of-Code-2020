@@ -3,7 +3,7 @@ lines = list(fileinput.input('input.txt'))
 ids = lines[1].strip().split(',')
 # we can solve this problems using chinese remainder theorem
 
-contrains = []
+equations = []
 N = 1
 
 # calculate inverse modulo
@@ -47,13 +47,13 @@ for i, idx in enumerate(ids):
     if idx  != 'x':
         idx = int(idx)
         i %= idx
-        contrains.append(((idx - i) % idx, idx)) 
+        equations.append((-i, idx))
         N *= idx
 
 ans = 0
 # solve the system of equation using CRT:
 # link https://laptrinhthidau.wordpress.com/2016/08/23/thuat-toan-euclid-mo-rong/
-for i, idx in contrains:
+for i, idx in equations:
     pi = int(N / idx)
     qi = int(mod_inverse(pi, idx))
     ans += int(i * pi * qi)
