@@ -51,7 +51,8 @@ for i, idx in enumerate(ids):
         N *= idx
 
 ans = 0
-
+# solve the system of equation using CRT:
+# link https://laptrinhthidau.wordpress.com/2016/08/23/thuat-toan-euclid-mo-rong/
 for i, idx in contrains:
     pi = int(N / idx)
     qi = int(mod_inverse(pi, idx))
