@@ -1,5 +1,5 @@
 import fileinput
-lines = list(fileinput.input('input.txt'))
+lines = list(fileinput.input('tung_input.txt'))
 ids = lines[1].strip().split(',')
 # we can solve this problems using chinese remainder theorem
 

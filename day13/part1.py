@@ -1,6 +1,6 @@
 import fileinput
 
-l = [l.strip() for l in fileinput.input('input.txt')]
+l = [l.strip() for l in fileinput.input('tung_input.txt')]
 
 ids = l[1].split(',')
 
